@@ -1,0 +1,35 @@
+﻿<Window x:Class="Fashion_Studio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fashion_Studio"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800">
+    <Grid Background="#beaefa">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.9*"/>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Image Source="/Images/logopurple.jpg"  Height="180"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
+            <Label Content="Fashion Studio" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontStyle="Italic"/>
+            <Label Content="Авторизация"  FontSize="25" HorizontalAlignment="Center" FontStyle="Italic"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <Label Content="Введите логин" FontSize="20" FontStyle="Italic" />
+            <TextBox Text="Логин" Name="inputLogin" FontSize="20" FontStyle="Italic"/>
+            <Label Content="Введите пароль" FontSize="20" FontStyle="Italic"/>
+            <TextBox  Text="Пароль" Name="inputPassword" FontSize="20" FontStyle="Italic"/>
+            <Button Content="Вход" Margin="10" FontSize="20" Background="white" FontStyle="Italic"/>
+        </StackPanel>
+    </Grid>
+</Window>
