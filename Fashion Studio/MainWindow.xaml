@@ -6,30 +6,7 @@
         xmlns:local="clr-namespace:Fashion_Studio"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800">
-    <Grid Background="#beaefa">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1.9*"/>
-            <RowDefinition/>
-            <RowDefinition Height="2*"/>
-        </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Grid.Column="1">
-            <Image Source="/Images/logopurple.jpg"  Height="180"/>
-        </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
-            <Label Content="Fashion Studio" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontStyle="Italic"/>
-            <Label Content="Авторизация"  FontSize="25" HorizontalAlignment="Center" FontStyle="Italic"/>
-        </StackPanel>
-        <StackPanel Grid.Row="2" Grid.Column="1">
-            <Label Content="Введите логин" FontSize="20" FontStyle="Italic" />
-            <TextBox Text="Логин" Name="inputLogin" FontSize="20" FontStyle="Italic"/>
-            <Label Content="Введите пароль" FontSize="20" FontStyle="Italic"/>
-            <TextBox  Text="Пароль" Name="inputPassword" FontSize="20" FontStyle="Italic"/>
-            <Button Content="Вход" Margin="10" FontSize="20" Background="white" FontStyle="Italic"/>
-        </StackPanel>
+    <Grid>
+        
     </Grid>
 </Window>
