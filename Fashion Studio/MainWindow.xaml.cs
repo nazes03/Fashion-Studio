@@ -22,19 +22,10 @@ namespace Fashion_Studio
     /// </summary>
     public partial class MainWindow : Window
     {
+         
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void GoLoginPage(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void inputLogin_TextChanged()
-        {
-
         }
     }
 }
