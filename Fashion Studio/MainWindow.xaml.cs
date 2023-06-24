@@ -21,11 +21,15 @@ namespace Fashion_Studio
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
-         
+    { 
+        Model1 context;
         public MainWindow()
         {
             InitializeComponent();
+            myFrame.Navigate(new Pages.authorization(context));
         }
     }
 }
+
+
+

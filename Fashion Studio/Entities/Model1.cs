@@ -8,7 +8,7 @@ namespace Fashion_Studio.Entities
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=FashionStudioEntities")
+            : base("name=Model1")
         {
         }
 
@@ -18,6 +18,7 @@ namespace Fashion_Studio.Entities
         public virtual DbSet<Model> Model { get; set; }
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<TypeModel> TypeModel { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

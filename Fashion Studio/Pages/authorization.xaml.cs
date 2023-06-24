@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fashion_Studio.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,38 @@ namespace Fashion_Studio.Pages
     /// </summary>
     public partial class authorization : Page
     {
-        public authorization()
+        Model1 context;
+        public authorization(Model1 cont)
         {
             InitializeComponent();
+            context = cont;
+        }
+
+        private void EnterClick(object sender, RoutedEventArgs e)
+        {
+            string login = LoginBox.Text;
+            string password = PasswordBox.Password;
+            Users user = context.Users.Find(login);
+            if (user!=null)
+            {
+                if (user.Password.Equals(password))
+                {
+                    MessageBox.Show("Успешная авторизация");
+                }
+                else
+                {
+                    MessageBox.Show("Неверный пароль");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Такого пользователя не существует");
+            }
+        }
+
+        private void RegistrationClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

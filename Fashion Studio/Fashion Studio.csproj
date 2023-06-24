@@ -79,6 +79,7 @@
     <Compile Include="Entities\Model1.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\TypeModel.cs" />
+    <Compile Include="Entities\Users.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
