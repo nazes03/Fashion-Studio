@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Fashion_Studio.Pages
 {
@@ -22,14 +23,26 @@ namespace Fashion_Studio.Pages
     public partial class authorization : Page
     {
         Model1 context;
+        DispatcherTimer timer;
         public authorization(Model1 cont)
         {
             InitializeComponent();
             context = cont;
+            timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0, 30);
+            timer.Tick += Timer_Tick;
         }
 
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            buttonEnter.IsEnabled = true;
+            timer.Stop();
+        }
+
+        int countClick = 0;
         private void EnterClick(object sender, RoutedEventArgs e)
         {
+            countClick++;
             string login = LoginBox.Text;
             string password = PasswordBox.Password;
             Users user = context.Users.Find(login);
@@ -38,15 +51,26 @@ namespace Fashion_Studio.Pages
                 if (user.Password.Equals(password))
                 {
                     MessageBox.Show("Успешная авторизация");
+                    countClick = 0;
                 }
                 else
                 {
                     MessageBox.Show("Неверный пароль");
+                    if (countClick==3)
+                    {
+                        buttonEnter.IsEnabled = false;
+                        timer.Start;
+                    }
                 }
             }
             else
             {
                 MessageBox.Show("Такого пользователя не существует");
+                if (countClick == 3)
+                {
+                    buttonEnter.IsEnabled = false;
+                    timer.Start;
+                }
             }
         }
 

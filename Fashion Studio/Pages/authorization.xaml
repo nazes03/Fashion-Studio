@@ -29,7 +29,7 @@
             <TextBox Name="LoginBox"/>
             <Label Content="Введите пароль"/>
             <PasswordBox Name="PasswordBox"/>
-            <Button Content="Вход" Click="EnterClick" Margin="10" />
+            <Button Content="Вход" Click="EnterClick" Name="buttonEnter" Margin="10" />
         </StackPanel>
         <Button Click="RegistrationClick" Grid.Column="2" Grid.Row="0" Content="Регистрация" Margin="50,10,10,130"/>
     </Grid>
