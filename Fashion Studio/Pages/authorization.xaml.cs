@@ -56,20 +56,20 @@ namespace Fashion_Studio.Pages
                 else
                 {
                     MessageBox.Show("Неверный пароль");
-                    if (countClick==3)
+                    if (countClick >= 3)
                     {
                         buttonEnter.IsEnabled = false;
-                        timer.Start;
+                        timer.Start();
                     }
                 }
             }
             else
             {
                 MessageBox.Show("Такого пользователя не существует");
-                if (countClick == 3)
+                if (countClick >= 3)
                 {
                     buttonEnter.IsEnabled = false;
-                    timer.Start;
+                    timer.Start();
                 }
             }
         }
