@@ -26,6 +26,7 @@ namespace Fashion_Studio
         public MainWindow()
         {
             InitializeComponent();
+            context = new Model1();
             myFrame.Navigate(new Pages.authorization(context));
         }
     }

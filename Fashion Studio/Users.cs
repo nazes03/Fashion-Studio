@@ -1,4 +1,4 @@
-namespace Fashion_Studio.Entities
+namespace Fashion_Studio
 {
     using System;
     using System.Collections.Generic;
@@ -8,6 +8,7 @@ namespace Fashion_Studio.Entities
 
     public partial class Users
     {
+        [Required]
         [StringLength(50)]
         public string Name { get; set; }
 
@@ -20,7 +21,6 @@ namespace Fashion_Studio.Entities
         public string Service_number { get; set; }
 
         [Key]
-        [Required]
         [StringLength(50)]
         public string Login { get; set; }
 
