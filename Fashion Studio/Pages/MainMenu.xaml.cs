@@ -37,7 +37,7 @@ namespace Fashion_Studio.Pages
 
         private void ModelClick(object sender, RoutedEventArgs e)
         {
-            MainMenuFrame.Navigate(new OrdersPage());
+            MainMenuFrame.Navigate(new ModelPage(_context));
         }
 
         private void ClothClick(object sender, RoutedEventArgs e)

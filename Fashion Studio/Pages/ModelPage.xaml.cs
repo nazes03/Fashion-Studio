@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fashion_Studio.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace Fashion_Studio.Pages
     /// </summary>
     public partial class ModelPage : Page
     {
-        public ModelPage()
+        Model1 context;
+        public ModelPage(Model1 _context)
         {
             InitializeComponent();
+            context = _context;
         }
     }
 }

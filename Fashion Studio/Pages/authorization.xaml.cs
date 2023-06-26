@@ -52,7 +52,7 @@ namespace Fashion_Studio.Pages
             {
                 if (user.Password.Equals(password))
                 {
-                    MessageBox.Show("Успешная авторизация");
+                    
                     countClick = 0;
                     NavigationService.Navigate(new MainMenu(context, window));
                 }
