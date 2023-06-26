@@ -24,13 +24,15 @@ namespace Fashion_Studio.Pages
     {
         Model1 context;
         DispatcherTimer timer;
-        public authorization(Model1 cont)
+        Window window;
+        public authorization(Model1 cont, Window w)
         {
             InitializeComponent();
             context = cont;
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 15);
             timer.Tick += Timer_Tick;
+            window = w;
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -52,7 +54,7 @@ namespace Fashion_Studio.Pages
                 {
                     MessageBox.Show("Успешная авторизация");
                     countClick = 0;
-                    NavigationService.Navigate(new MainMenu(context));
+                    NavigationService.Navigate(new MainMenu(context, window));
                 }
                 else
                 {

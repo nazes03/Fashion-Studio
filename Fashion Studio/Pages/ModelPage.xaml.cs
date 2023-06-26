@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Fashion_Studio.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для OrdersPage.xaml
+    /// Логика взаимодействия для ModelPage.xaml
     /// </summary>
-    public partial class OrdersPage : Page
+    public partial class ModelPage : Page
     {
-        public OrdersPage()
+        public ModelPage()
         {
             InitializeComponent();
         }

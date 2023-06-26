@@ -22,15 +22,27 @@ namespace Fashion_Studio.Pages
     public partial class MainMenu : Page
     {
         Window Window;
+        Model1 _context;
         public MainMenu(Model1 context, Window window)
         {
             InitializeComponent();
             Window = window;
+            _context = context;
         }
 
         private void ExitClick(object sender, RoutedEventArgs e)
         {
             Window.Close();
+        }
+
+        private void ModelClick(object sender, RoutedEventArgs e)
+        {
+            MainMenuFrame.Navigate(new OrdersPage());
+        }
+
+        private void ClothClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
