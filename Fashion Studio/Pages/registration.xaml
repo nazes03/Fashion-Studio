@@ -27,10 +27,9 @@
             <TextBlock Text="Табельный номер"/>
             <TextBox Name="SNumberBox"/>
             <TextBlock Text="Логин"/>
-            <PasswordBox Name="LoginBox"/>
+            <TextBox Name="LoginBox"/>
             <TextBlock Text="Пароль"/>
             <PasswordBox Name="PasswordBox"/>
-            
             <Button Content="Зарегистрироваться" Click="RegClick" Name="buttonReg" Margin="10" />
         </StackPanel>
     </Grid>

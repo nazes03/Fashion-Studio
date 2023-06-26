@@ -35,7 +35,7 @@ namespace Fashion_Studio.Pages
                 Post = PostBox.Text,
                 Service_number = SNumberBox.Text,
                 Login = LoginBox.Text,
-                Password = PasswordBox.Text
+                Password = PasswordBox.Password               
             };
             context.Users.Add(users);
             context.SaveChanges();

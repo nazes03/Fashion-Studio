@@ -29,7 +29,7 @@ namespace Fashion_Studio.Pages
             InitializeComponent();
             context = cont;
             timer = new DispatcherTimer();
-            timer.Interval = new TimeSpan(0, 0, 30);
+            timer.Interval = new TimeSpan(0, 0, 15);
             timer.Tick += Timer_Tick;
         }
 
