@@ -1,7 +1,5 @@
-﻿using Fashion_Studio.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Fashion_Studio
+namespace Fashion_Studio.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для OrdersPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
-    { 
-        Model1 context;
-        public MainWindow()
+    public partial class OrdersPage : Page
+    {
+        public OrdersPage()
         {
             InitializeComponent();
-            context = new Model1();
-            myFrame.Navigate(new Pages.authorization(context, this));
         }
     }
 }
-
-
-

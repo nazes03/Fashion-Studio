@@ -52,6 +52,7 @@ namespace Fashion_Studio.Pages
                 {
                     MessageBox.Show("Успешная авторизация");
                     countClick = 0;
+                    NavigationService.Navigate(new MainMenu(context));
                 }
                 else
                 {

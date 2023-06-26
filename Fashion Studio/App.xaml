@@ -23,6 +23,10 @@
         <Style TargetType="Button">
             <Setter Property="Background" Value="White"/>
             <Setter Property="FontSize" Value="20"/>
+            
+        </Style>
+        <Style TargetType="DataGrid">
+            <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontFamily" Value="Bookman Old Style"/>
         </Style>
     </Application.Resources>

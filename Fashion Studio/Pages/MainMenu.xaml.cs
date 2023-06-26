@@ -1,7 +1,6 @@
 ﻿using Fashion_Studio.Entities;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,22 +14,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Fashion_Studio
+namespace Fashion_Studio.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Main.xaml
     /// </summary>
-    public partial class MainWindow : Window
-    { 
-        Model1 context;
-        public MainWindow()
+    public partial class MainMenu : Page
+    {
+        Window Window;
+        public MainMenu(Model1 context, Window window)
         {
             InitializeComponent();
-            context = new Model1();
-            myFrame.Navigate(new Pages.authorization(context, this));
+            Window = window;
+        }
+
+        private void ExitClick(object sender, RoutedEventArgs e)
+        {
+            Window.Close();
         }
     }
 }
-
-
-

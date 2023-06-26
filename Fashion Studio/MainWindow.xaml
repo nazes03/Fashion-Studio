@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fashion_Studio"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="Fashion Studio" Height="500" Width="800">
     <Grid>
         <Frame Name="myFrame"/>
     </Grid>
