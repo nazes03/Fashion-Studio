@@ -14,19 +14,23 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="0.45*"/>
-            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="2.5*"/>
         </Grid.RowDefinitions>
-        <Image Source="/Images/logo.jpg" Grid.Row="0" Grid.Column="0" Height="180"/>
-        <Label Content="Регистрация" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" FontSize="30" Margin="10"/>
+        <Image Source="/Images/logo.jpg" Grid.Row="0" Grid.Column="0" Height="110" Margin="15"/>
         <Label Content="Fashion Studio"  FontSize="25" HorizontalAlignment="Center"/>
+        <TextBlock Text="Регистрация" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="30" Grid.Row="0" Grid.Column="1"/>
         <StackPanel Grid.Row="2" Grid.Column="1">
-            <Label Content="Введите имя"/>
-            <TextBox Name="nameddBox"/>
-            <Label Content="Введите логин"/>
+            <TextBlock Text="Имя"/>
+            <TextBox Name="NameBox"/>
+            <TextBlock Text="Должность"/>
+            <TextBox Name="PostBox"/>
+            <TextBlock Text="Табельный номер"/>
+            <TextBox Name="SNumberBox"/>
+            <TextBlock Text="Логин"/>
             <PasswordBox Name="LoginBox"/>
-            <Label Content="Введите пароль"/>
+            <TextBlock Text="Пароль"/>
             <PasswordBox Name="PasswordBox"/>
+            
             <Button Content="Зарегистрироваться" Click="RegClick" Name="buttonReg" Margin="10" />
         </StackPanel>
     </Grid>

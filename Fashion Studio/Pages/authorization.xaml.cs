@@ -76,7 +76,8 @@ namespace Fashion_Studio.Pages
 
         private void RegistrationClick(object sender, RoutedEventArgs e)
         {
-
+            registration regWindow = new registration(context);
+            regWindow.Show();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fashion_Studio.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,26 @@ namespace Fashion_Studio.Pages
     /// </summary>
     public partial class registration : Window
     {
-        public registration()
+        Model1 context;
+        public registration(Model1 cont)
         {
             InitializeComponent();
+            context = cont;
+        }
+
+        private void RegClick(object sender, RoutedEventArgs e)
+        {
+            Users users = new Users()
+            {
+                Name = NameBox.Text,
+                Post = PostBox.Text,
+                Service_number = SNumberBox.Text,
+                Login = LoginBox.Text,
+                Password = PasswordBox.Text
+            };
+            context.Users.Add(users);
+            context.SaveChanges();
+            this.Close();
         }
     }
 }
