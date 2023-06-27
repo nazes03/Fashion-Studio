@@ -52,8 +52,6 @@ namespace Fashion_Studio.Pages
             {
                 if (user.Password.Equals(password))
                 {
-                    
-                    countClick = 0;
                     NavigationService.Navigate(new MainMenu(context, window));
                 }
                 else

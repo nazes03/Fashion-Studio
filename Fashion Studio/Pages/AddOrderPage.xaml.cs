@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -17,26 +18,28 @@ using System.Windows.Shapes;
 namespace Fashion_Studio.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Main.xaml
+    /// Логика взаимодействия для AddOrderPage.xaml
     /// </summary>
-    public partial class MainMenu : Page
+    public partial class AddOrderPage : Page
     {
-        Window Window;
-        Model1 _context;
-        public MainMenu(Model1 context, Window window)
+        Model1 context;
+        public AddOrderPage(Model1 c)
         {
             InitializeComponent();
-            Window = window;
-            _context = context;
+            context = c;
         }
 
-        private void ExitClick(object sender, RoutedEventArgs e)
+        private void CancelClick(object sender, RoutedEventArgs e)
         {
-            Window.Close();
+            NavigationService.GoBack();
         }
-        private void OrdersClick(object sender, RoutedEventArgs e)
+
+        private void AddClick(object sender, RoutedEventArgs e)
         {
-            MainMenuFrame.Navigate(new OrdersPage(_context));
+            Order ord = new Order() {};
+            context.Order.Add(ord);
+            context.SaveChanges();
+            NavigationService.Navigate(new OrdersPage(context));
         }
     }
 }
