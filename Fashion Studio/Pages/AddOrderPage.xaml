@@ -20,6 +20,9 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBlock Grid.ColumnSpan="2" Text="Заказы" FontSize="30" HorizontalAlignment="Center"/>
         <Rectangle Grid.Row="1" Grid.ColumnSpan="2" Fill="#ffffff" Height="15" VerticalAlignment="Top"/>
@@ -27,11 +30,17 @@
         <TextBlock Text="ФИО клиента" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
         <TextBlock Text="Модель"  Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
         <TextBlock Text="Ткань"  Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
-        <TextBox Name="IdOrder" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Width="400" Height="35" Margin="5"/>
-        <TextBox Name="IdClient" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Width="400" Height="35" Margin="5"/>
-        <TextBox Name="IdModel" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Width="400" Height="35" Margin="5"/>
-        <TextBox Name="IdCloth" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Width="400" Height="35" Margin="5"/>
-        <Button Content="Добавить" Click="CancelClick" Grid.Column="0" Grid.Row="5" Width="100" Height="30" HorizontalAlignment="Right" Margin="5"/>
-        <Button Content="Отменить" Click="AddClick" Grid.Column="1" Grid.Row="5" Width="100" Height="30" HorizontalAlignment="Left" Margin="5"/>
+        <TextBlock Text="Закройщик"  Grid.Column="0" Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Text="Дата начала"  Grid.Column="0" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Text="Дата конца"  Grid.Column="0" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBox Name="IdOrderBox" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Width="400" Height="35" Margin="5"/>
+        <TextBox Name="IdClientBox" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Width="400" Height="35" Margin="5"/>
+        <TextBox Name="IdModelBox" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Width="400" Height="35" Margin="5"/>
+        <TextBox Name="IdClothBox" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Width="400" Height="35" Margin="5"/>
+        <TextBox Name="IdDressMakerBox" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" Width="400" Height="35" Margin="5"/>
+        <TextBox Name="DateOfStartBox" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Width="400" Height="35" Margin="5"/>
+        <TextBox Name="DateOfEndBox" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Left" Width="400" Height="35" Margin="5"/>
+        <Button Content="Добавить" Click="CancelClick" Grid.Column="0" Grid.Row="8" Width="100" Height="30" HorizontalAlignment="Right" Margin="5"/>
+        <Button Content="Отменить" Click="AddClick" Grid.Column="1" Grid.Row="8" Width="100" Height="30" HorizontalAlignment="Left" Margin="5"/>
     </Grid>
 </Page>

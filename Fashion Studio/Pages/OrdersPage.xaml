@@ -22,20 +22,26 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBlock Grid.ColumnSpan="2" Text="Заказы" FontSize="30" HorizontalAlignment="Center"/>
         <Rectangle Grid.Row="1" Grid.ColumnSpan="2" Fill="#ffffff" Height="15" VerticalAlignment="Top"/>
-        <DataGrid Name="OrderData" AutoGenerateColumns="False" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="4" >
+        <DataGrid Name="OrderData" AutoGenerateColumns="False" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="6" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Номер Заказа" Width="*" Binding="{Binding IdOrder}"/>
                 <DataGridTextColumn Header="ФИО клиента" Width="*" Binding="{Binding ClientName}"/>
                 <DataGridTextColumn Header="Модель" Width="*" Binding="{Binding ModelTitle}"/>
                 <DataGridTextColumn Header="Ткань" Width="*" Binding="{Binding ClothTitle}"/>
+                <DataGridTextColumn Header="Закройщк" Width="*" Binding="{Binding DressMakerName}"/>
+                <DataGridTextColumn Header="Дата начала" Width="*" Binding="{Binding DateOfStart}"/>
+                <DataGridTextColumn Header="Дата конца" Width="*" Binding="{Binding DateOfEnd}"/>
                 <DataGridTemplateColumn Header="Действия" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <TextBlock  FontSize="14"><Hyperlink>Редактировать</Hyperlink></TextBlock>
+                                <TextBlock  FontSize="14"><Hyperlink Click="EditClick">Редактировать</Hyperlink></TextBlock>
                                 <TextBlock FontSize="14" Foreground="Red"><Hyperlink Click="RemoveClick">Удалить</Hyperlink></TextBlock>
                             </StackPanel>
                         </DataTemplate>

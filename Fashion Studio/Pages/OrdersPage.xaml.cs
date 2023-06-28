@@ -44,12 +44,18 @@ namespace Fashion_Studio.Pages
                     Order ord = (sender as Hyperlink).DataContext as Order;
                     context.Order.Remove(ord);
                     context.SaveChanges();
+                    OrderData.ItemsSource = context.Order.ToList();
                 }
                 catch
                 {
                     MessageBox.Show("Ошибка");
                 }
             }
+        }
+
+        private void EditClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

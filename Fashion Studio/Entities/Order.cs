@@ -35,6 +35,9 @@ namespace Fashion_Studio.Entities
 
         public string ClothTitle
         {  get { return Cloth.Title; } }
+        public string DressMakerName
+        { get { return DressMakers.Name; } }
+
         public virtual Client Client { get; set; }
 
         public virtual Cloth Cloth { get; set; }
