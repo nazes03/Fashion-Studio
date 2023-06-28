@@ -26,27 +26,30 @@ namespace Fashion_Studio.Pages
         {
             InitializeComponent();
             context = _cont;
+            OrderData.ItemsSource = context.Order.ToList();
         }
 
         private void AddClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AddOrderPage(context));
         }
-        // private void RemoveClick(object sender, RoutedEventArgs e)
-        //   {
-        //      MessageBoxResult result = MessageBox.Show("Вы точно хотите удалить заказ?", "Удаление", MessageBoxButton.YesNo, MessageBoxImage.Question);
-        //      if (result == MessageBoxResult.Yes)
-        //      {
-        //        try
-        //         {
-        //     Order ord = (sender as Hyperlink).DataContext as Order;
-        //          context.Order.Remove(ord);
-        //        context.SaveChanges();
-        //    }
-        //      catch
-        //     {
-        //        MessageBox.Show("Ошибка");
-        //   }
-        //   }
-    }  
+
+        private void RemoveClick(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Вы точно хотите удалить заказ?", "Удаление", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    Order ord = (sender as Hyperlink).DataContext as Order;
+                    context.Order.Remove(ord);
+                    context.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Ошибка");
+                }
+            }
+        }
+    }
 }

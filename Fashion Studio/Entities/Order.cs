@@ -27,6 +27,14 @@ namespace Fashion_Studio.Entities
         [Column(TypeName = "date")]
         public DateTime DateOfEnd { get; set; }
 
+        public string ClientName
+        { get { return Client.Name; } }
+
+        public string ModelTitle
+        { get { return Model.Title; } }
+
+        public string ClothTitle
+        {  get { return Cloth.Title; } }
         public virtual Client Client { get; set; }
 
         public virtual Cloth Cloth { get; set; }
