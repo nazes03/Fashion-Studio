@@ -40,7 +40,7 @@
         <TextBox Name="IdDressMakerBox" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" Width="400" Height="35" Margin="5"/>
         <TextBox Name="DateOfStartBox" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Width="400" Height="35" Margin="5"/>
         <TextBox Name="DateOfEndBox" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Left" Width="400" Height="35" Margin="5"/>
-        <Button Content="Добавить" Click="CancelClick" Grid.Column="0" Grid.Row="8" Width="100" Height="30" HorizontalAlignment="Right" Margin="5"/>
+        <Button Name="ButtonAU" Content="Добавить" Click="CancelClick" Grid.Column="0" Grid.Row="8" Width="100" Height="30" HorizontalAlignment="Right" Margin="5"/>
         <Button Content="Отменить" Click="AddClick" Grid.Column="1" Grid.Row="8" Width="100" Height="30" HorizontalAlignment="Left" Margin="5"/>
     </Grid>
 </Page>

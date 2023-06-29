@@ -55,7 +55,8 @@ namespace Fashion_Studio.Pages
 
         private void EditClick(object sender, RoutedEventArgs e)
         {
-
+            Order ord = (sender as Hyperlink).DataContext as Order;
+            NavigationService.Navigate(new AddOrderPage(context, ord));
         }
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,12 +29,35 @@ namespace Fashion_Studio.Pages
         {
             InitializeComponent();
             context = c;
+
         }
         public AddOrderPage(Model1 c, Order ord)
         {
             InitializeComponent();
             context = c;
             order = ord;
+            ButtonAU.Content = "Редактировать";
+            ButtonAU.Click += EditClick;
+            IdOrderBox.Text = order.IdOrder.ToString();
+            IdClientBox.Text = order.IdClient.ToString();
+            IdModelBox.Text = order.IdModel.ToString();
+            IdClothBox.Text = order.IdCloth.ToString();
+            IdDressMakerBox.Text = order.idDressMaker.ToString();
+            DateOfStartBox.Text = order.DateOfEnd.ToString();
+            DateOfEndBox.Text = order.DateOfEnd.ToString(); 
+        }
+
+        private void EditClick(object sender, RoutedEventArgs e)
+        {
+            order.IdOrder = Convert.ToInt32(IdOrderBox.Text);
+            order.IdClient = Convert.ToInt32(IdClientBox.Text);
+            order.IdModel = Convert.ToInt32(IdModelBox.Text);
+            order.IdCloth = Convert.ToInt32(IdClothBox.Text);
+            order.idDressMaker = Convert.ToInt32(IdDressMakerBox.Text);
+            order.DateOfStart = Convert.ToDateTime(DateOfStartBox.Text);
+            order.DateOfEnd = Convert.ToDateTime(DateOfEndBox.Text);    
+            context.SaveChanges();
+            NavigationService.Navigate(new AddOrderPage(context));
         }
 
         private void CancelClick(object sender, RoutedEventArgs e)
@@ -55,7 +79,7 @@ namespace Fashion_Studio.Pages
             };
             context.Order.Add(ord);
             context.SaveChanges();
-            NavigationService.Navigate(new AddOrderPage(context));
+            NavigationService.Navigate(new OrdersPage(context));
         }
     }
 }
